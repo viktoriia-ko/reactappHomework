@@ -13,7 +13,7 @@ code {
 }
 
 .buttons {
-  height: 30px;
+  height: 33%;
 }
 button {
   border: none;
@@ -26,6 +26,7 @@ button {
   color: aliceblue;
   font-weight: bold;
   height: 100%;
+  width: 33%;
 }
 
 .plus:hover {
@@ -34,7 +35,7 @@ button {
 .number {
   color: rgb(87, 86, 86);
   font-weight: bold;
-  height: 57%;
+  height: 67%;
   font-size: 24px;
   display: flex;
   justify-content: center;
@@ -46,6 +47,7 @@ button {
   color: aliceblue;
   font-weight: bold;
   height: 100%;
+  width: 33%;
 }
 .minus:hover {
   background-color: rgb(199, 10, 10);
@@ -53,6 +55,7 @@ button {
 .refresh {
   background-color: yellow;
   height: 100%;
+  width: 33%;
 }
 .refresh:hover {
   background-color: rgb(216, 216, 10);
