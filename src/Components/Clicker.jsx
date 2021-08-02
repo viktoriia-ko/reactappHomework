@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "./Button";
 import styles from "./divComponent.module.css";
 
 export const Clicker = (props) => {
@@ -8,30 +9,21 @@ export const Clicker = (props) => {
       <div className={styles.number}>{count}</div>
 
       <div className={styles.buttons}>
-        <button
+        <Button
           className={styles.plus}
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          +
-        </button>
-        <button
+          value={"+"}
+          pushButton={() => setCount(count + 1)}
+        />
+        <Button
           className={styles.refresh}
-          onClick={() => {
-            setCount(0);
-          }}
-        >
-          0
-        </button>
-        <button
+          value={"0"}
+          pushButton={() => setCount(0)}
+        />
+        <Button
           className={styles.minus}
-          onClick={() => {
-            setCount(count - 1);
-          }}
-        >
-          -
-        </button>
+          value={"-"}
+          pushButton={() => setCount(count - 1)}
+        />
       </div>
     </div>
   );
