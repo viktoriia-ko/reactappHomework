@@ -1,39 +1,38 @@
 import { useState } from "react";
+import styles from "./divComponent.module.css";
 
 export const Clicker = (props) => {
-  const [z, setZ] = useState(props.num);
+  const [count, setCount] = useState(props.num);
   return (
-    <>
-      <div class="clicker">
-        <div class="number">{z}</div>
+    <div className={styles.clicker}>
+      <div className={styles.number}>{count}</div>
 
-        <div class="buttons">
-          <button
-            class="plus"
-            onClick={() => {
-              setZ(z + 1);
-            }}
-          >
-            +
-          </button>
-          <button
-            class="refresh"
-            onClick={() => {
-              setZ(0);
-            }}
-          >
-            0
-          </button>
-          <button
-            class="minus"
-            onClick={() => {
-              setZ(z - 1);
-            }}
-          >
-            -
-          </button>
-        </div>
+      <div className={styles.buttons}>
+        <button
+          className={styles.plus}
+          onClick={() => {
+            setCount(count + 1);
+          }}
+        >
+          +
+        </button>
+        <button
+          className={styles.refresh}
+          onClick={() => {
+            setCount(0);
+          }}
+        >
+          0
+        </button>
+        <button
+          className={styles.minus}
+          onClick={() => {
+            setCount(count - 1);
+          }}
+        >
+          -
+        </button>
       </div>
-    </>
+    </div>
   );
 };
