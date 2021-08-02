@@ -4,6 +4,8 @@ import styles from "./divComponent.module.css";
 
 export const Clicker = (props) => {
   const [count, setCount] = useState(props.num);
+  const countPlus = count + 1;
+  const countMinus = count - 1;
   return (
     <div className={styles.clicker}>
       <div className={styles.number}>{count}</div>
@@ -12,7 +14,7 @@ export const Clicker = (props) => {
         <Button
           className={styles.plus}
           value={"+"}
-          pushButton={() => setCount(count + 1)}
+          pushButton={() => setCount(countPlus)}
         />
         <Button
           className={styles.refresh}
@@ -22,7 +24,7 @@ export const Clicker = (props) => {
         <Button
           className={styles.minus}
           value={"-"}
-          pushButton={() => setCount(count - 1)}
+          pushButton={() => setCount(countMinus)}
         />
       </div>
     </div>
