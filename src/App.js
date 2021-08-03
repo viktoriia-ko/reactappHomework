@@ -1,7 +1,7 @@
 import "./App.css";
 import { Clicker } from "./Components/Clicker";
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <div className="App-header">
@@ -13,6 +13,4 @@ function App() {
       </div>
     </div>
   );
-}
-
-export default App;
+};
